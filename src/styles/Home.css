@@ -1,0 +1,122 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    height: 100vh;
+    background: linear-gradient(135deg, #f6f8fc, #e2e8f0); /* Gradient background */
+    font-family: "Poppins", sans-serif;
+}
+
+/* Left Section */
+.home-left {
+    flex: 1;
+    padding: 2rem;
+}
+
+.home-title {
+    font-size: 3rem; /* Larger title font size */
+    font-weight: bold;
+    color: #1f6feb; /* Blue color */
+    margin-bottom: 1rem;
+}
+
+.home-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.home-roles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; /* Add space below roles */
+}
+
+.static-text {
+    font-weight: bold;
+    color: #ff6347; /* Tomato color */
+}
+
+.dynamic-text {
+    display: inline-block;
+    height: 2rem;
+    overflow: hidden;
+    position: relative;
+    width: 300px; 
+    white-space: nowrap; 
+    top: 0.3;
+}
+
+.dynamic-text span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    animation: slide 9s ease-in-out infinite;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; 
+    color: #ffcc00; 
+}
+
+
+.dynamic-text span:nth-child(1) {
+    animation-delay: 2s; 
+}
+
+.dynamic-text span:nth-child(2) {
+    animation-delay: 5s; 
+}
+
+.dynamic-text span:nth-child(3) {
+    animation-delay: 8s; 
+}
+
+
+@keyframes slide {
+    5%, 100% {
+        transform: translateY(0); 
+    }
+    33% {
+        transform: translateY(-2rem); 
+    }
+    66% {
+        transform: translateY(-4rem); 
+    }
+}
+
+/* Right Section (Profile Image) */
+.home-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 70%; /* Scale image appropriately */
+    max-width: 400px;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 5px solid #1f6feb; /* Blue border */
+}
+
+.resume-button {
+    background-color: #1f6feb; /* Blue background */
+    color: #fff; /* White text */
+    padding: 1rem 2rem; /* Padding around button */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Add space above button */
+}
+
+.resume-button:hover {
+    background-color: #165dbb; /* Darker blue on hover */
+}

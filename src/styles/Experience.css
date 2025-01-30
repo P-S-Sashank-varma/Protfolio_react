@@ -1,0 +1,114 @@
+.experience {
+    padding: 3rem 5%;
+    background: linear-gradient(to right, #f4f4f4, #e2e8f0);
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .experience-item {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .experience-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: rotate(15deg);
+  }
+  
+  .experience-details h3 {
+    font-size: 1.7rem;
+    color: #222;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .position {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .experience-details ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .experience-details ul li {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .experience-details ul li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+  }
+  
+  .experience-item:hover .experience-details h3 {
+    color: #007bff;
+  }
+  
+  .experience-item:hover .position {
+    color: #007bff;
+  }
+  
+  .experience-item:hover .experience-details ul li {
+    color: #333;
+  }
+  .experience-item {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .company-logo {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 1rem;
+  }
+  

@@ -1,0 +1,74 @@
+/* About Section */
+.about {
+    padding: 4rem 8%;
+    background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+/* Title */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Description */
+.about-description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Education Section */
+.education {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.education-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-box:hover {
+    transform: scale(1.05);
+}
+
+/* Icons */
+.edu-icon {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+}
+
+/* Percentage Styling */
+.percentage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+
+.download-icon {
+    margin-right: 8px;
+}
