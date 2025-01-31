@@ -13,7 +13,7 @@ const Home = () => {
         <div className="home-roles">
           <span className="static-text">I am a</span>
           <span className="dynamic-text">
-            <span>MERN Stack Developer</span>   <span>AI/ML Developer</span>   <span>Programmer</span> 
+            <span>MERN Stack Developer</span>   <span>AI/ML Developer</span>  
             <span>Programmer</span> </span>
         </div>
         <a href="https://drive.google.com/file/d/1Yj4y2WkcfBBnclWQhm1kXWJl1pIsWHNS/view?usp=drivesdk" className="resume-button" target="_blank" rel="noopener noreferrer">
