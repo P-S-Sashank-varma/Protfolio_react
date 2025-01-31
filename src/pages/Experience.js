@@ -1,5 +1,4 @@
 import React from "react";
-import { FaBriefcase, FaCode } from "react-icons/fa";
 import "../styles/Experience.css";
 
 import aquarlabsLogo from "../assets/Aqualogo.jpg";
@@ -12,7 +11,6 @@ const Experience = () => {
       
       <div className="experience-item">
         <img src={aquarlabsLogo} alt="Aquarlabs Logo" className="company-logo" />
-        <FaBriefcase className="icon" />
         <div className="experience-details">
           <h3>
             <a href="https://drive.google.com/file/d/1Z1zcWidpLU41C1AmAcJHWJ8EjLjbVa7T/view?usp=drivesdk" 
@@ -32,7 +30,6 @@ const Experience = () => {
 
       <div className="experience-item">
         <img src={edunetLogo} alt="Edunet Foundation Logo" className="company-logo" />
-        <FaCode className="icon" />
         <div className="experience-details">
           <h3>
             <a href="https://drive.google.com/file/d/1cKyjZ9kS1o8H61i25kw90QIWMpBwhCqR/view?usp=drivesdk" 
