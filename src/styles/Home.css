@@ -8,16 +8,16 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Left Section */
+
 .home-left {
     flex: 1;
     padding: 2rem;
 }
 
 .home-title {
-    font-size: 3rem; /* Larger title font size */
+    font-size: 3rem; 
     font-weight: bold;
-    color: #1f6feb; /* Blue color */
+    color: #1f6feb; 
     margin-bottom: 1rem;
 }
 
@@ -33,12 +33,12 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 1.5rem;
-    margin-bottom: 2rem; /* Add space below roles */
+    margin-bottom: 2rem; 
 }
 
 .static-text {
     font-weight: bold;
-    color: #ff6347; /* Tomato color */
+    color: #ff6347; 
 }
 
 .dynamic-text {
@@ -64,15 +64,15 @@
 }
 
 .dynamic-text span:nth-child(1) {
-    animation-delay: 0s; /* First phrase, no delay */
+    animation-delay: 0s;
 }
 
 .dynamic-text span:nth-child(2) {
-    animation-delay: 3s; /* 3 seconds delay for the second phrase */
+    animation-delay: 3s; 
 }
 
 .dynamic-text span:nth-child(3) {
-    animation-delay: 6s; /* 6 seconds delay for the third phrase */
+    animation-delay: 6s; 
 }
 
 @keyframes slide {
@@ -99,26 +99,26 @@
 }
 
 .profile-image {
-    width: 70%; /* Scale image appropriately */
+    width: 70%; 
     max-width: 400px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border: 5px solid #1f6feb; /* Blue border */
+    border: 5px solid #1f6feb;
 }
 
 .resume-button {
-    background-color: #1f6feb; /* Blue background */
-    color: #fff; /* White text */
-    padding: 1rem 2rem; /* Padding around button */
+    background-color: #1f6feb; 
+    color: #fff; 
+    padding: 1rem 2rem; 
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     transition: background-color 0.3s ease;
-    margin-top: 1rem; /* Add space above button */
+    margin-top: 1rem; 
 }
 
 .resume-button:hover {
-    background-color: #165dbb; /* Darker blue on hover */
+    background-color: #165dbb; 
 }
