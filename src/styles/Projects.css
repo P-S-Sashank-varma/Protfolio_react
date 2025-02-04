@@ -2,7 +2,7 @@
 .projects {
     padding: 4rem 5%;
     text-align: center;
-    background-color: #f8f9fa; /* Light background */
+    background-color: #f8f9fa;
     font-family: "Poppins", sans-serif;
   }
   
@@ -29,21 +29,21 @@
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    border: 2px solid transparent; /* Initially transparent border */
+    border: 2px solid transparent;
     position: relative;
   }
   
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-    border-color: #f39c12; /* Border color on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); 
+    border-color: #f39c12; 
   }
   
   /* Project Image */
   .project-image {
     width: 100%;
     height: auto;
-    max-width: 150px; /* Size control */
+    max-width: 150px; 
     border-radius: 10px;
     margin-bottom: 1rem;
     object-fit: cover;
@@ -59,7 +59,7 @@
   }
   
   .project-title:hover {
-    color: #f39c12; /* Change color on hover */
+    color: #f39c12; 
   }
   
   /* Project Description */
@@ -82,7 +82,7 @@
   
   .github-link:hover {
     color: #f39c12;
-    transform: translateX(5px); /* Slight move to the right on hover */
+    transform: translateX(5px); 
   }
   
   /* GitHub Icon */
@@ -93,6 +93,6 @@
   }
   
   .github-icon:hover {
-    transform: rotate(10deg); /* Slight rotation effect on hover */
+    transform: rotate(10deg); 
   }
   
