@@ -1,66 +1,10 @@
+/* Skills Section - Optimized for Performance */
 .skills {
   padding: 80px 0;
   background: linear-gradient(135deg, #06020b 0%, #0c0517 50%, #0a0513 100%);
   position: relative;
   overflow: hidden;
   color: white;
-}
-
-/* Animated Stars Background for Skills */
-.skills::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 25px 35px, #fff, transparent),
-    radial-gradient(1px 1px at 65px 75px, #fff, transparent),
-    radial-gradient(1px 1px at 105px 45px, #fff, transparent),
-    radial-gradient(2px 2px at 145px 85px, #fff, transparent),
-    radial-gradient(1px 1px at 185px 35px, #fff, transparent);
-  background-repeat: repeat;
-  background-size: 220px 130px;
-  animation: skills-stars 8s linear infinite;
-  z-index: 0;
-}
-
-.skills::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(1px 1px at 75px 25px, #fff, transparent),
-    radial-gradient(2px 2px at 125px 75px, #fff, transparent),
-    radial-gradient(1px 1px at 175px 125px, #fff, transparent),
-    radial-gradient(1px 1px at 35px 95px, #fff, transparent);
-  background-repeat: repeat;
-  background-size: 280px 160px;
-  animation: skills-stars 9s linear infinite reverse;
-  z-index: 0;
-}
-
-@keyframes skills-stars {
-  0%, 100% {
-    opacity: 0.6;
-    transform: translateY(0px) translateX(0px);
-  }
-  25% {
-    opacity: 0.4;
-    transform: translateY(-8px) translateX(5px);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(0px) translateX(0px);
-  }
-  75% {
-    opacity: 0.3;
-    transform: translateY(8px) translateX(-5px);
-  }
 }
 
 .skills-container {
@@ -81,16 +25,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: skills-title-glow 3s ease-in-out infinite alternate;
-}
-
-@keyframes skills-title-glow {
-  from {
-    text-shadow: 0 0 20px rgba(8, 3, 20, 0.053);
-  }
-  to {
-    text-shadow: 0 0 40px rgba(6, 182, 212, 0.5);
-  }
 }
 
 .skills-grid {
@@ -105,31 +39,14 @@
   backdrop-filter: blur(15px);
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.3),
-    0 0 50px rgba(139, 92, 246, 0.1);
-  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(139, 92, 246, 0.2);
-  animation: skill-category-float 6s ease-in-out infinite;
-  animation-delay: calc(var(--category-index, 0) * 0.5s);
-}
-
-@keyframes skill-category-float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
 }
 
 .skill-category:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 80px rgba(4, 0, 13, 0.025);
-  border-color: rgba(15, 10, 26, 0.5);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(139, 92, 246, 0.1));
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .category-title {
@@ -138,7 +55,6 @@
   color: #ffffff;
   position: relative;
   padding-bottom: 10px;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .category-title::after {
@@ -149,16 +65,6 @@
   width: 40px;
   height: 3px;
   background: linear-gradient(90deg, #8b5cf6, #06b6d4);
-  animation: category-line-pulse 2s ease-in-out infinite;
-}
-
-@keyframes category-line-pulse {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
-  }
 }
 
 .skills-list {
@@ -180,81 +86,32 @@
   color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  animation: skill-item-glow 4s ease-in-out infinite;
-  animation-delay: calc(var(--skill-index, 0) * 0.2s);
-}
-
-@keyframes skill-item-glow {
-  0%, 100% {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  50% {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(6, 182, 212, 0.3);
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 30px rgba(6, 182, 212, 0.4);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(6, 182, 212, 0.15));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .skill-icon {
   font-size: 1.2rem;
 }
 
-.python {
-  color: #3776AB;
-}
-
-.java {
-  color: #007396;
-}
-
-.html {
-  color: #E34F26;
-}
-
-.css {
-  color: #1572B6;
-}
-
-.js {
-  color: #F7DF1E;
-}
-
-.sql {
-  color: #4479A1;
-}
-
-.mysql {
-  color: #4479A1;
-}
-
-.mongo {
-  color: #47A248;
-}
-
-.github {
-  color: #181717;
-}
-
-.git {
-  color: #F05032;
-}
-
-.react {
-  color: #61DAFB;
-}
-
-.node {
-  color: #339933;
-}
-
-.linux {
-  color: #FCC624;
-}
+/* Skill Icon Colors */
+.python { color: #3776AB; }
+.java { color: #007396; }
+.html { color: #E34F26; }
+.css { color: #1572B6; }
+.js { color: #F7DF1E; }
+.sql { color: #4479A1; }
+.mysql { color: #4479A1; }
+.mongo { color: #47A248; }
+.github { color: #181717; }
+.git { color: #F05032; }
+.react { color: #61DAFB; }
+.node { color: #339933; }
+.linux { color: #FCC624; }
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
