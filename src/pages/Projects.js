@@ -1,41 +1,41 @@
-
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "../styles/Projects.css";
-import foodlinkImage from "../assets/foodi.jpg";
 import campusImage from "../assets/campus.png";
-import sentimentImage from "../assets/sentiment.jpg";
-import roadAccidentImage from "../assets/road.jpg";
+import foodlinkImage from "../assets/foodlinkimage.png";
+import riceclassfication from "../assets/riceclassfication.jpeg";
+import smartHireImage from "../assets/Smarthire.png";
 
 const projects = [
   {
     title: "FoodLink (MERN Stack)",
     description: "A food donation platform connecting donors with NGOs and needy individuals.",
     github: "https://github.com/P-S-Sashank-varma",
+    live: "https://foodlink123-sigma.vercel.app/", // Replace with actual deployed URL
     image: foodlinkImage,
     tags: ["React", "Node.js", "MongoDB", "Express"]
   },
   {
     title: "Campus Safety Hub",
     description: "An SOS safety alert system for Aditya College campuses using real-time data.",
-    github: "https://github.com/P-S-Sashank-varma",
+    github: "https://github.com/P-S-Sashank-varma/Campus_safety_hub",
     image: campusImage,
     tags: ["React", "Firebase", "Geolocation", "Real-time"]
   },
   {
-    title: "Sentiment Analysis (NLP)",
-    description: "A machine learning project that classifies text reviews as positive or negative.",
-    github: "https://github.com/P-S-Sashank-varma",
-    image: sentimentImage,
-    tags: ["Python", "NLP", "Machine Learning", "NLTK"]
+    title: "Smart Hire AI",
+    description: "An AI-powered job matching and HR interview system that parses resumes, matches candidates to job listings, and conducts skill-based mock interviews with real-time scoring.",
+    github: "https://github.com/P-S-Sashank-varma/ai-job-matching", 
+    image: smartHireImage,  
+    tags: ["React", "FastAPI", "Machine Learning", "NLP", "Resume Parsing", "LLM"]
   },
   {
-    title: "Road Accident Prediction (ML)",
-    description: "Predicts the likelihood of road accidents using machine learning models.",
-    github: "https://github.com/P-S-Sashank-varma",
-    image: roadAccidentImage,
-    tags: ["Python", "ML", "Data Analysis", "Scikit-learn"]
-  },
+    title: "GrainPalette",
+    description: "A rice grain classification app using transfer learning with MobileNet, achieving 93% accuracy and real-time predictions via a Flask web interface.",
+    github: "https://github.com/P-S-Sashank-varma/rice-classification-app",  
+    image: riceclassfication, 
+    tags: ["Transfer Learning", "MobileNet", "Flask", "Deep Learning", "Keras"]
+  }
 ];
 
 const Projects = () => {
@@ -53,9 +53,9 @@ const Projects = () => {
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
                       <FaGithub /> Code
                     </a>
-                    {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
-                        <FaExternalLinkAlt /> Demo
+                    {project.live && (
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
+                        <FaExternalLinkAlt /> Live
                       </a>
                     )}
                   </div>

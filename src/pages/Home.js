@@ -27,7 +27,7 @@ const Home = () => {
           </div>
           <div className="button-group">
             <a 
-              href="https://drive.google.com/file/d/1Yj4y2WkcfBBnclWQhm1kXWJl1pIsWHNS/view?usp=drivesdk" 
+              href="https://drive.google.com/file/d/10D61Y-rQheK2U9kbKUsTLfjFzbTDtZMN/view?usp=drivesdk" 
               className="resume-button" 
               target="_blank" 
               rel="noopener noreferrer"

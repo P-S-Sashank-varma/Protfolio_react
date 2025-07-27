@@ -63,7 +63,7 @@ const ContactForm = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <FaEnvelope className="contact-icon" />
-                <span>sashank.varma@example.com</span>
+                <span>sashankvarma920@gmailcom</span>
               </div>
             </div>
           </div>

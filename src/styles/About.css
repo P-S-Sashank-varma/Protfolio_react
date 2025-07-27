@@ -1,21 +1,57 @@
-
 .about {
-    background-color: #f9fafb;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
   }
   
+  /* Animated Stars Background for About section */
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(1px 1px at 25px 35px, #fff, transparent),
+      radial-gradient(1px 1px at 65px 75px, #fff, transparent),
+      radial-gradient(2px 2px at 105px 45px, #fff, transparent),
+      radial-gradient(1px 1px at 145px 85px, #fff, transparent),
+      radial-gradient(1px 1px at 185px 35px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 220px 120px;
+    animation: sparkle-about 4s linear infinite;
+    z-index: 0;
+  }
+  
   .about::after {
     content: '';
     position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(1px 1px at 75px 25px, #fff, transparent),
+      radial-gradient(2px 2px at 125px 75px, #fff, transparent),
+      radial-gradient(1px 1px at 175px 125px, #fff, transparent),
+      radial-gradient(1px 1px at 225px 175px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 280px 200px;
+    animation: sparkle-about 5s linear infinite reverse;
     z-index: 0;
+  }
+  
+  @keyframes sparkle-about {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      opacity: 0.2;
+      transform: scale(0.9) rotate(180deg);
+    }
   }
   
   .about-container {
@@ -24,6 +60,28 @@
     padding: 0 2rem;
     position: relative;
     z-index: 1;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #6366f1, #8b5cf6, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: title-glow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes title-glow {
+    from {
+      text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    }
+    to {
+      text-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+    }
   }
   
   .about-content {
@@ -41,28 +99,66 @@
   
   .about-description {
     font-size: 1.1rem;
-    color: var(--text);
+    color: #e2e8f0;
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .about-description:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-5px);
   }
   
   .highlight {
-    color: var(--primary-color);
+    color: #06b6d4;
     font-weight: 600;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
   }
   
   .education-section {
-    background-color: white;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(99, 102, 241, 0.05));
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.3),
+      0 0 50px rgba(99, 102, 241, 0.1);
     padding: 2rem;
-    border-top: 4px solid var(--primary-color);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .education-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #06b6d4);
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
   
   .education-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: var(--text);
+    color: #ffffff;
     position: relative;
     padding-bottom: 10px;
     display: inline-block;
@@ -75,7 +171,19 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    animation: pulse-line 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-line {
+    0%, 100% {
+      opacity: 1;
+      width: 50px;
+    }
+    50% {
+      opacity: 0.7;
+      width: 70px;
+    }
   }
   
   .education {
@@ -88,26 +196,64 @@
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    background-color: var(--card-bg);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(99, 102, 241, 0.03));
     border-radius: 12px;
     padding: 1.2rem;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .education-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+  }
+  
+  .education-box:hover::before {
+    left: 100%;
   }
   
   .education-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
-    background-color: white;
-    border-color: var(--primary-light);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+      0 15px 30px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.5);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(99, 102, 241, 0.06));
   }
   
   .edu-icon {
     font-size: 2rem;
-    color: var(--primary-color);
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    color: #6366f1;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(6, 182, 212, 0.2));
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+    animation: icon-float 4s ease-in-out infinite;
+  }
+  
+  @keyframes icon-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .education-box:hover .edu-icon {
+    color: #06b6d4;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.3), rgba(99, 102, 241, 0.3));
+    transform: scale(1.1);
   }
   
   .education-details {
@@ -117,23 +263,36 @@
   .degree {
     font-size: 1.1rem;
     margin-bottom: 0.2rem;
-    color: var(--text);
+    color: #ffffff;
+    font-weight: 600;
   }
   
   .institution {
     font-size: 0.95rem;
-    color: var(--text-light);
+    color: #cbd5e1;
     margin-bottom: 0.5rem;
   }
   
   .percentage {
     font-weight: 600;
-    color: var(--primary-color);
+    color: #06b6d4;
     font-size: 1rem;
     display: inline-block;
     padding: 0.2rem 0.5rem;
-    background: rgba(99, 102, 241, 0.1);
-    border-radius: 4px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(99, 102, 241, 0.2));
+    border-radius: 6px;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+    animation: percentage-glow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes percentage-glow {
+    from {
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+    }
   }
   
   @media screen and (max-width: 1024px) {
@@ -159,6 +318,10 @@
     .education-section {
       order: 2;
     }
+    
+    .section-title {
+      font-size: 2rem;
+    }
   }
   
   @media screen and (max-width: 480px) {
@@ -170,5 +333,8 @@
     .edu-icon {
       margin-bottom: 1rem;
     }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
   }
-  

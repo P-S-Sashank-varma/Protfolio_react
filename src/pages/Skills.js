@@ -1,7 +1,18 @@
-
 import React from "react";
-import { FaPython, FaJava, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaNodeJs, FaReact, FaGitAlt, FaGithub, FaLinux } from "react-icons/fa";
-import "../styles/Skills.css"; 
+import {
+  FaPython,
+  FaJava,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaDatabase,
+  FaNodeJs,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+  FaLinux
+} from "react-icons/fa";
+import "../styles/Skills.css";
 
 const Skills = () => {
   return (
@@ -29,6 +40,7 @@ const Skills = () => {
             <div className="skills-list">
               <div className="skill-item"><FaDatabase className="skill-icon mysql" /> MySQL</div>
               <div className="skill-item"><FaDatabase className="skill-icon mongo" /> MongoDB</div>
+              <div className="skill-item">Database Management System</div>
             </div>
           </div>
 
@@ -39,6 +51,7 @@ const Skills = () => {
               <div className="skill-item"><FaGithub className="skill-icon github" /> GitHub</div>
               <div className="skill-item"><FaGitAlt className="skill-icon git" /> Git</div>
               <div className="skill-item">VS Code</div>
+              <div className="skill-item">Version Control</div>
             </div>
           </div>
 
@@ -50,6 +63,7 @@ const Skills = () => {
               <div className="skill-item"><FaNodeJs className="skill-icon node" /> Node.js</div>
               <div className="skill-item">Express.js</div>
               <div className="skill-item"><FaLinux className="skill-icon linux" /> Linux</div>
+              <div className="skill-item">Website Development</div>
             </div>
           </div>
 
@@ -59,8 +73,21 @@ const Skills = () => {
             <div className="skills-list">
               <div className="skill-item">AI & ML</div>
               <div className="skill-item">NLP</div>
+              <div className="skill-item">Machine Learning</div>
+              <div className="skill-item">Data Analysis</div>
             </div>
           </div>
+
+          {/* CS Fundamentals */}
+          <div className="skill-category">
+            <h3 className="category-title">Computer Science Fundamentals</h3>
+            <div className="skills-list">
+              <div className="skill-item">Operating Systems</div>
+              <div className="skill-item">Data Structures and Algorithms</div>
+              <div className="skill-item">Object Oriented Programming</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
